@@ -17,7 +17,8 @@ public class MyArrayListTest {
         System.out.println(myArrayList);
         System.out.println("The List size is " + myArrayList.size());
         myArrayList.clear();
-        System.out.println(myArrayList);
+        System.out.println("The List size is " + myArrayList.size());
+
 
     }
 }

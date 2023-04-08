@@ -2,7 +2,7 @@ package MyQueue;
 
 public class MyQueueTest {
     public static void main(String[] args) {
-        MyQueue myQueue = new MyQueue(3);
+        MyQueue myQueue = new MyQueue();
         myQueue.add(4);
         myQueue.add(2);
         myQueue.add(3);

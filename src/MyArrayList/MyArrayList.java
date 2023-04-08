@@ -28,11 +28,10 @@ public class MyArrayList <E> {
     }
 
     public void clear(){
-        for (int i = 0; i<myIndex; i++) {
-            array[i] = "";
-            array = Arrays.copyOf(array, array.length - 1);
-            myIndex--;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = null;
         }
+        myIndex=0;
     }
 
     @Override

@@ -2,9 +2,9 @@ package MyHashMap;
 
 public class Node<K, V> {
 
-    private  K key;
+    private K key;
     private V value;
-    private Node<K, V> next;
+    private Node <K, V> next;
     private long hashCode;
 
     public K getKey() {
@@ -38,4 +38,5 @@ public class Node<K, V> {
     public void setHashCode(long hashCode) {
         this.hashCode = hashCode;
     }
-}
+
+    }

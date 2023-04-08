@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0262f48d-3678-4b10-93bf-edf5dcecbc04" name="Changes" comment="" />
+    <list default="true" id="0262f48d-3678-4b10-93bf-edf5dcecbc04" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyArrayList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyArrayList/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyArrayList/MyArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyArrayList/MyArrayListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyHashMap/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyHashMap/MyHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyHashMap/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyHashMap/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyQueue/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyQueue/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyQueue/MyQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyQueue/MyQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStack/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStack/MyStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStack/MyStackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStack/MyStackTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +32,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/MyArrayList/MyArrayList.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/MyHashMap/MyHashMap.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,7 +53,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main$LinkedList">
     <configuration name="Main$LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main$LinkedList" />
       <module name="HW9" />
@@ -50,8 +61,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyQueue.MyQueue" />
+    <configuration name="MyQueueTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyQueue.MyQueueTest" />
       <module name="HW9" />
       <extension name="coverage">
         <pattern>
@@ -63,10 +74,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyStack.MyStack" />
+      <module name="HW9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MyStack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyStack" />
+        <item itemvalue="Application.MyQueueTest" />
         <item itemvalue="Application.Main$LinkedList" />
-        <item itemvalue="Application.MyQueue" />
       </list>
     </recent_temporary>
   </component>
@@ -84,23 +109,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/MyStack/MyStack.java</url>
-          <line>58</line>
-          <properties class="MyStack.MyStack" method="clear">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/MyHashMap/MyHashMap.java</url>
-          <line>64</line>
-          <properties class="MyHashMap.MyHashMap" method="clear">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="52" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MyStack/MyStackTest.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -3,24 +3,26 @@ package MyQueue;
 import java.util.Arrays;
 
 public class MyQueue <E> {
-    private int[] myQ;
+    private Object[] myQ= new Object[0];
     private int front;
     private int rear;
     private int capacity;
     private int count;
-    public MyQueue(int size) {
-        myQ = new int[size];
-        capacity = size;
-        front = 0;
-        rear = -1;
-        count = 0;
+   // public MyQueue(int size) {
+   //        myQ = new int[size];
+   //        capacity = size;
+   //        front = 0;
+   //        rear = -1;
+   //        count = 0;
+   //    }
+
+    public MyQueue() {
     }
 
-    void add(int element){
+    void add(E element){
         System.out.println("Inserting " + element);
-
-        rear = (rear + 1) % capacity;
-        myQ[rear] = element;
+        myQ = Arrays.copyOf(myQ, myQ.length +1);
+        myQ[count] = element;
         count++;
     }
 
@@ -45,7 +47,7 @@ public class MyQueue <E> {
 
         System.out.println("Removing " + x);
 
-        front = (front + 1) % capacity;
+        front = (front + 1) % size();
         count--;
 
         return x;

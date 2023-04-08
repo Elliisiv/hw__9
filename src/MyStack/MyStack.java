@@ -3,26 +3,18 @@ package MyStack;
 import java.util.Arrays;
 
 public class MyStack <E>{
-    private int[] myStackArr;
-    private int top;
-    private int capacity;
+    private Object[] myStackArr = new Object[0];
+    private int top=-1;
 
-    public MyStack(int size) {
-        myStackArr = new int[size];
-        capacity = size;
-        top = -1;
+    public MyStack() {
     }
 
-    public void push(int element) //добавление в конец
+    public void push(E element) //добавление в конец
     {
-        if (isFull())
-        {
-            System.out.println("Overflow\nProgram Terminated\n");
-            System.exit(-1);
-        }
-
         System.out.println("Inserting " + element);
+        myStackArr = Arrays.copyOf(myStackArr, myStackArr.length +1);
         myStackArr[++top] = element;
+
     }
     public void remove(int index) { //удаление по индексу
         for (int i = index; i < top - 1; i++)
@@ -35,7 +27,7 @@ public class MyStack <E>{
     public int peek() //возврат первого "последнего" елемента стека
     {
         if (!isEmpty()) {
-        return myStackArr[top];
+        return (int) myStackArr[top];
     }
         else {
         System.exit(-1);
@@ -43,7 +35,6 @@ public class MyStack <E>{
 
         return -1;
     }
-
         public int pop() {
             if (isEmpty())
             {
@@ -53,31 +44,29 @@ public class MyStack <E>{
 
             System.out.println("Removing " + peek());
 
-            // уменьшаем размер stack на 1 и (необязательно) возвращаем извлеченный элемент
+
             return (int) myStackArr[top--];
     }
     public void clear() {
-        for (int i = 0; i < capacity; i++) {
+        for (int i = 0; i < myStackArr.length; i++) {
+            myStackArr[i] = 0;
             myStackArr = Arrays.copyOf(myStackArr, myStackArr.length - 1);
-            capacity--;
+            top--;
         }
     }
     public int size() {
         return top + 1;
     }
 
-    // Вспомогательная функция для проверки, пуст stack или нет
+
     public boolean isEmpty() {
-        return top == -1;               // или return size() == 0;
+        return top == -1;
     }
 
-    // Вспомогательная функция для проверки, заполнен ли stack или нет
-    public boolean isFull() {
-        return top == capacity - 1;
-    }
     @Override
     public String toString() {
         return "MyStack= " + Arrays.toString(myStackArr);
     }
+
 
 }
