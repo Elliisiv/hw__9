@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0262f48d-3678-4b10-93bf-edf5dcecbc04" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyArrayList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyArrayList/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyArrayList/MyArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyArrayList/MyArrayListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyHashMap/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyHashMap/MyHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyHashMap/MyHashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyHashMap/MyHashMapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyHashMap/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyHashMap/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyQueue/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyQueue/MyQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyQueue/MyQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyQueue/MyQueueTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStack/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStack/MyStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStack/MyStackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStack/MyStackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +48,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main$LinkedList">
+  <component name="RunManager">
     <configuration name="Main$LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main$LinkedList" />
       <module name="HW9" />
@@ -89,9 +84,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main$LinkedList" />
         <item itemvalue="Application.MyStack" />
         <item itemvalue="Application.MyQueueTest" />
-        <item itemvalue="Application.Main$LinkedList" />
       </list>
     </recent_temporary>
   </component>

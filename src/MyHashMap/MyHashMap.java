@@ -6,38 +6,68 @@ import java.util.Arrays;
 public class MyHashMap <K, V>{
     private Node<K, V>[] nodeList = new Node[ARRAY_SIZE];
     private static final int ARRAY_SIZE = 16;
+    private static final float TH = ARRAY_SIZE*0.75f;
     int count=0;
-    public void put(K key, V value) throws InvalidKeyException {
-        long hashCode = this.getHashCode(key);
-        int index = this.getIndex(hashCode);
+    //        long hashCode = this.getHashCode(key);
+    //        int index = this.getIndex(hashCode);
+    //
+    //        if (index > ARRAY_SIZE) {
+    //            throw new InvalidKeyException("Invalid key, please check again!");
+    //        }
+    //        if (this.nodeList[index] != null) {
+    //            Node<K, V> nodeList = this.nodeList[index];
+    //            while (nodeList.getNext() != null) {
+    //                nodeList = nodeList.getNext();
+    //            }
+    //            Node<K, V> newNode = new Node<K, V>();
+    //            newNode.setKey(key);
+    //            newNode.setValue(value);
+    //            newNode.setHashCode(hashCode);
+    //
+    //            nodeList.setNext(newNode);
+    //
+    //        } else {
+    //
+    //            Node<K, V> newNode = new Node<K, V>();
+    //            newNode.setKey(key);
+    //            newNode.setValue(value);
+    //            newNode.setHashCode(hashCode);
+    //
+    //            this.nodeList[index] = newNode;
+    //            count++;
+    //        }
+    public void put(K key, V value)  {
+        if(key==null)
+            return;
+        int hashCode=this.getHashCode(key);
 
-        if (index > ARRAY_SIZE) {
-            throw new InvalidKeyException("Invalid key, please check again!");
-        }
-        if (this.nodeList[index] != null) {
-            Node<K, V> nodeList = this.nodeList[index];
-            while (nodeList.getNext() != null) {
-                nodeList = nodeList.getNext();
-            }
-            Node<K, V> newNode = new Node<K, V>();
-            newNode.setKey(key);
-            newNode.setValue(value);
-            newNode.setHashCode(hashCode);
-
-            nodeList.setNext(newNode);
-
-        } else {
-
-            Node<K, V> newNode = new Node<K, V>();
-            newNode.setKey(key);
-            newNode.setValue(value);
-            newNode.setHashCode(hashCode);
-
-            this.nodeList[index] = newNode;
+        Node<K,V> newEntry = new Node<K,V>(key, value, null);
+        if(nodeList[hashCode] == null){
+            nodeList[hashCode] = newEntry;
             count++;
+        }else{
+            Node<K,V> previous = null;
+            Node<K,V> current = nodeList[hashCode];
+
+            while(current != null){
+                if(current.getKey().equals(key)){
+                    if(previous==null){
+                        newEntry.setNext(current.getNext());
+                        nodeList[hashCode]=newEntry;
+                        return;
+                    }
+                    else{
+                        newEntry.setNext(current.getNext());
+                        previous.setNext(newEntry);
+                        return;
+                    }
+                }
+                previous=current;
+                current = current.getNext();
+            }
+            previous.setNext(newEntry);
         }
     }
-
 
     public V get(K key){
         int hashCode = this.getHashCode(key);
@@ -109,9 +139,6 @@ public class MyHashMap <K, V>{
             if (node != null) {
                 int listIndex = 0;
                 while (node != null) {
-                    if (listIndex < 0) {
-                        System.out.print(" || ");
-                    }
                     System.out.print(node.getKey().toString() + " -> ");
                     System.out.print(node.getValue().toString());
                     node = node.getNext();
@@ -128,35 +155,6 @@ public class MyHashMap <K, V>{
         return "MyHashMap{" +
                 "nodeList=" + Arrays.toString(nodeList) +
                 '}';
-    }
-    public static void main(String[] args) {
-        MyHashMap<Integer, String> hashMap = new MyHashMap();
-        try {
-            hashMap.put(1, "One");
-            hashMap.put(2, "Two");
-            hashMap.put(21, "Twenty One");
-            hashMap.put(22, "Twenty Two");
-            hashMap.put(23, "Twenty Three");
-            hashMap.put(256, "Two Hundred And Fifty Six");
-            hashMap.put(1, "1");
-            hashMap.put(1, "2");
-            hashMap.put(1, "3");
-            hashMap.printHashMap();
-        } catch (InvalidKeyException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("The Hash Map size is " + hashMap.size());
-
-        System.out.println("value corresponding to key 21="
-                + hashMap.get(21));
-        System.out.println("\n\nvalue corresponding to key 21 removed: "
-                + hashMap.remove(21));
-        hashMap.printHashMap();
-        System.out.println("The Hash Map size is " + hashMap.size());
-        hashMap.clear();
-        hashMap.printHashMap();
-        System.out.println("The Hash Map size is " + hashMap.size());
     }
 
 }

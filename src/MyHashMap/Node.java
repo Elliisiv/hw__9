@@ -7,6 +7,12 @@ public class Node<K, V> {
     private Node <K, V> next;
     private long hashCode;
 
+    public Node(K key, V value, Node<K, V> next) {
+        this.key = key;
+        this.value = value;
+        this.next = next;
+    }
+
     public K getKey() {
         return key;
     }
@@ -39,4 +45,4 @@ public class Node<K, V> {
         this.hashCode = hashCode;
     }
 
-    }
+}
